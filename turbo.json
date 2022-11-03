@@ -14,5 +14,23 @@
     "dev": {
       "cache": false
     }
-  }
+  },
+  "globalEnv": [
+    "MONGO_HOST",
+    "MONGO_PORT",
+    "MONGO_ADMIN",
+    "MONGO_ADMIN_PSWD",
+    "MONGO_USER",
+    "MONGO_USER_PSWD",
+    "JWT_KEY",
+    "AUTH_PORT",
+    "AUTH_MONGO_URI",
+    "ORDERS_PORT",
+    "ORDERS_MONGO_URI",
+    "PRODUCTS_PORT",
+    "PRODUCTS_MONGO_URI",
+    "PAYMENTS_PORT",
+    "PAYMENTS_MONGO_URI",
+    "STRIPE_KEY"
+  ]
 }

@@ -1,0 +1,27 @@
+.headerContainer {
+  width: 100%;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+
+  .logo {
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .headerIconWrapper {
+    display: inline;
+    margin-left: 1rem;
+
+    img {
+      width: 1.75rem;
+      height: 1.75rem;
+
+      @media (prefers-color-scheme: dark) {
+        filter: invert(100%);
+      }
+    }
+  }
+}

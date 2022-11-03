@@ -1,0 +1,15 @@
+.signUpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0 3rem 0;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+
+  & > button {
+    flex-basis: 1;
+  }
+}
