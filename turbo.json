@@ -11,7 +11,7 @@
     "test": {
       "outputs": []
     },
-    "dev": {
+    "start:dev": {
       "cache": false
     }
   },
