@@ -1,7 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
 import { ClientProxy } from '@nestjs/microservices';
-import { map, Observable } from 'rxjs';
+import { catchError, map, Observable } from 'rxjs';
 
 @Injectable()
 export class AuthService {
@@ -22,6 +22,15 @@ export class AuthService {
           throw new Error('Invalid credentials');
         }),
       );
+  }
+
+  registerUser(data: any): Observable<any> {
+    return this.usersClient.send({ role: 'user', cmd: 'create' }, data).pipe(
+      map((user) => ({ id: user.id, username: user.username })),
+      catchError((e) => {
+        throw new Error('User cannot be created');
+      }),
+    );
   }
 
   login(user: any) {

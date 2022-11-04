@@ -18,6 +18,17 @@ export class AppController {
     );
   }
 
+  @MessagePattern({ role: 'auth', cmd: 'register' })
+  register(data: any): Observable<any> {
+    return this.authService.registerUser(data).pipe(
+      map((user) => this.authService.login(user)),
+      catchError((err) => {
+        console.error('[AUTH]', err);
+        throw new RpcException('User cannot be created');
+      }),
+    );
+  }
+
   @MessagePattern({ role: 'auth', cmd: 'check' })
   check(data: any) {
     try {
