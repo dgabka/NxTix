@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "start:dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -21,7 +21,7 @@
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "eslint": "^8.26.0",
-    "eslint-config-custom": "*",
+    "eslint-config-nxtix": "*",
     "sass": "^1.55.0",
     "tsconfig": "*",
     "typescript": "^4.8.4"
