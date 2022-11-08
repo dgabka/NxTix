@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist"
+  },
+  "extends": "tsconfig/nestjs.json",
+  "exclude": ["node_modules", "dist"]
+}

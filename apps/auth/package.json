@@ -46,6 +46,7 @@
     "@types/passport-jwt": "^3.0.7",
     "@types/passport-local": "^1.0.34",
     "@types/supertest": "^2.0.11",
+    "@nxtix/types": "*",
     "eslint": "^8.0.1",
     "eslint-config-nxtix": "*",
     "jest": "28.1.3",

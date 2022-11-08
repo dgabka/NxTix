@@ -1,0 +1,18 @@
+{
+  "name": "@nxtix/types",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "dgabka",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "typescript": "^4.8.4",
+    "tsconfig": "*",
+    "eslint-config-nxtix": "*"
+  }
+}

@@ -1,15 +1,14 @@
 import { Controller, Post, Body, UnauthorizedException } from '@nestjs/common';
 import { Observable, catchError } from 'rxjs';
 import { AuthService } from './auth.service';
+import { ILoginPayload, ILoginResponse, IRegisterPayload } from '@nxtix/types';
 
 @Controller('auth')
 export class AuthController {
   constructor(private authService: AuthService) {}
 
   @Post('/login')
-  login(
-    @Body() body: { username: string; password: string },
-  ): Observable<{ access_token: string }> {
+  login(@Body() body: ILoginPayload): Observable<ILoginResponse> {
     return this.authService.login(body).pipe(
       catchError(() => {
         throw new UnauthorizedException('Invalid credentials');
@@ -20,13 +19,8 @@ export class AuthController {
   @Post('/register')
   register(
     @Body()
-    body: {
-      username: string;
-      password: string;
-      name: string;
-      age: number;
-    },
-  ): Observable<{ access_token: string }> {
+    body: IRegisterPayload,
+  ): Observable<ILoginResponse> {
     return this.authService.register(body).pipe(
       catchError(() => {
         throw new UnauthorizedException('User already exists');

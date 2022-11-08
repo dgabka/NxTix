@@ -12,6 +12,7 @@ module.exports = {
   ],
   rules: {
     'prefer-const': 'error',
+    'no-console': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
   },
 };

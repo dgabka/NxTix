@@ -1,13 +1,5 @@
-import {
-  Body,
-  Controller,
-  Get,
-  Post,
-  Request,
-  UnauthorizedException,
-  UseGuards,
-} from '@nestjs/common';
-import { catchError, Observable } from 'rxjs';
+import { Controller, Get, Request, UseGuards } from '@nestjs/common';
+import { Observable } from 'rxjs';
 import { AppService } from './app.service';
 import { AuthGuard } from './auth/auth.guard';
 

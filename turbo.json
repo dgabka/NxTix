@@ -12,7 +12,8 @@
       "outputs": []
     },
     "start:dev": {
-      "cache": false
+      "cache": false,
+      "dependsOn": ["^build"]
     }
   },
   "globalEnv": [
