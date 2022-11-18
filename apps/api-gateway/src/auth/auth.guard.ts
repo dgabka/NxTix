@@ -28,7 +28,7 @@ export class AuthGuard implements CanActivate {
       .pipe(
         timeout(3000),
         tap((user) => {
-          req.user = user;
+          req['user'] = user;
         }),
         map(() => true),
         catchError(() => of(false)),

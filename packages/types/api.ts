@@ -33,3 +33,8 @@ export interface IUserProfileEntity {
 export interface ILoginResponse {
   accessToken: string;
 }
+
+export interface IGenericTcpConfig {
+  host: string;
+  port: number;
+}

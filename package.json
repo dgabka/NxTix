@@ -2,18 +2,14 @@
   "name": "nxtix",
   "version": "0.0.0",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run start:dev",
+    "dev": "dotenv -- turbo run start:dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint-config-nxtix": "*",
+    "eslint-config-nxtix": "workspace:*",
     "prettier": "latest",
     "turbo": "1.6.3"
   },
@@ -22,6 +18,5 @@
   },
   "dependencies": {
     "dotenv-cli": "^6.0.0"
-  },
-  "packageManager": "yarn@1.22.19"
+  }
 }

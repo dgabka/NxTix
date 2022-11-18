@@ -8,11 +8,11 @@ async function bootstrap() {
     {
       transport: Transport.TCP,
       options: {
-        port: 5001,
+        port: +process.env.SERVICE_AUTH_PORT,
       },
     },
   );
 
   await app.listen();
 }
-bootstrap();
+void bootstrap();

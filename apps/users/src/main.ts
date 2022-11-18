@@ -8,10 +8,10 @@ async function bootstrap() {
     {
       transport: Transport.TCP,
       options: {
-        port: 5002,
+        port: +process.env.SERVICE_USERS_PORT,
       },
     },
   );
   await app.listen();
 }
-bootstrap();
+void bootstrap();

@@ -1,5 +1,5 @@
 {
-  "name": "@nxtix/types",
+  "name": "@nxtix/config",
   "version": "0.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -10,9 +10,15 @@
     "build": "tsc"
   },
   "devDependencies": {
+    "@nxtix/types": "workspace:*",
     "eslint": "^8.27.0",
-    "typescript": "^4.8.4",
+    "eslint-config-nxtix": "workspace:*",
     "tsconfig": "workspace:*",
-    "eslint-config-nxtix": "workspace:*"
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "@nestjs/common": "^9.0.0",
+    "@nestjs/config": "^2.2.0",
+    "@nestjs/microservices": "^9.2.0"
   }
 }

@@ -2,13 +2,11 @@ import { Controller } from '@nestjs/common';
 import { MessagePattern, RpcException } from '@nestjs/microservices';
 import { catchError, map, Observable, of, throwError } from 'rxjs';
 import { AuthService } from './auth/auth.service';
+import { AuthLoginMsg, AuthRegisterMsg, AuthVerifyMsg } from '@nxtix/types';
 
-import {
+import type {
   ILoginPayload,
   IRegisterPayload,
-  AuthLoginMsg,
-  AuthRegisterMsg,
-  AuthVerifyMsg,
   ILoginResponse,
   IAuthenticatedUser,
 } from '@nxtix/types';
