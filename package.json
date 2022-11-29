@@ -9,7 +9,7 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "eslint-config-nxtix": "workspace:*",
+    "eslint-config-nxtix": "workspace:0.0.0",
     "prettier": "latest",
     "turbo": "1.6.3"
   },

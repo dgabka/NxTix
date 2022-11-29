@@ -6,6 +6,7 @@ import {
 } from '@nestjs/config';
 import databaseConfig from './database.config';
 import servicesConfig from './services.config';
+import { DatabaseConfigService } from './database-config.service';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import servicesConfig from './services.config';
       load: [databaseConfig, servicesConfig],
     }),
   ],
-  providers: [TcpTransportConfigService, ConfigService],
-  exports: [TcpTransportConfigService, ConfigService],
+  providers: [TcpTransportConfigService, DatabaseConfigService, ConfigService],
+  exports: [TcpTransportConfigService, DatabaseConfigService, ConfigService],
 })
 export class ConfigModule {}
